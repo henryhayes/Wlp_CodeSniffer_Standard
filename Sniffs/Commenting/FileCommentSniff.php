@@ -66,12 +66,12 @@ class WLP_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Sniff
      */
     protected $tags = array(
                        'category'   => array(
-                                        'required'       => true,
+                                        'required'       => false,
                                         'allow_multiple' => false,
                                         'order_text'     => 'precedes @package',
                                        ),
                        'package'    => array(
-                                        'required'       => false,
+                                        'required'       => true,
                                         'allow_multiple' => false,
                                         'order_text'     => 'follows @category',
                                        ),
