@@ -71,7 +71,7 @@ class WLP_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Sniff
                                         'order_text'     => 'precedes @package',
                                        ),
                        'package'    => array(
-                                        'required'       => true,
+                                        'required'       => false,
                                         'allow_multiple' => false,
                                         'order_text'     => 'follows @category',
                                        ),
@@ -130,8 +130,9 @@ class WLP_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Sniff
      */
     public function register()
     {
-        return array(T_OPEN_TAG);
-
+	// don't check for file doc block
+        return array();
+        //return array(T_OPEN_TAG);
     }//end register()
 
 

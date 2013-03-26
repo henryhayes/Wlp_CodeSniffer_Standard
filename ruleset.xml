@@ -1,25 +1,14 @@
 <?xml version="1.0"?>
-<ruleset name="Zend">
- <description>A coding standard for WLP.</description>
+<ruleset name="WLP">
+	<description>A coding standard for WLP.</description>
+	
+	<rule ref="Zend"></rule>
 
- <rule ref="PEAR">
-  <include name="Generic.Functions.OpeningFunctionBraceKernighanRitchie"/>
-  <exclude name="Generic.Files.LineEndings"/>
-  <exclude name="Pear.Classes.ClassDeclaration"/>
-  <exclude name="Pear.Functions.FunctionDeclaration"/>
-  <exclude name="Pear.Commenting.FileComment"/>
-  <exclude name="Pear.Commenting.ClassComment"/>
-  <exclude name="Pear.NamingConventions.ValidFunctionName"/>
-  <exclude name="Pear.NamingConventions.ValidVariableName"/>
- </rule>
- <!-- Lines can be 80 chars long, show errors at 120 chars -->
- 
- <rule ref="Generic.Files.LineLength">
-  <properties>
-   <property name="lineLimit" value="120"/>
-   <property name="absoluteLineLimit" value="0"/>
-  </properties>
- </rule>
-
- 
+	<!-- Lines can be 120 chars long, show errors at 120 chars -->
+	<rule ref="Generic.Files.LineLength">
+		<properties>
+			<property name="lineLimit" value="120"/>
+			<property name="absoluteLineLimit" value="120"/>
+		</properties>
+	</rule>
 </ruleset>
